@@ -31,7 +31,6 @@ Route::group(['prefix' => 'products', 'as' => 'products.'], function () {
     Route::get('/show/{product}', [ProductController::class, 'show'])->name('show');
     Route::get('/products/export', [ProductController::class, 'exportExcel'])->name('export');
 
-
     // Razorpay Payment
     Route::group(['prefix' => 'buy', 'as' => 'buy.'], function () {
         Route::post('/payment', [RazorPayController::class, 'payment'])->name('payment');
